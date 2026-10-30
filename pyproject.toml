@@ -1,0 +1,23 @@
+[tool.mypy]
+python_version = "3.13"
+ignore_missing_imports = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+check_untyped_defs = true
+strict_optional = true
+
+[tool.ruff]
+target-version = "py313"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    "B008",  # Allow FastAPI Depends() in function parameter defaults
+    "E501",  # Allow long docstrings/lines
+    "B024",  # Allow marker base class without abstract methods
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["backend/src"]
+testpaths = ["backend/tests"]

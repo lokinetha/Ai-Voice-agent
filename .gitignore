@@ -1,0 +1,45 @@
+# ── Secrets ────────────────────────────────────────────────
+# Never commit API keys / environment configuration.
+.env
+.env.*
+!.env.example
+
+# ── Python ─────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+dist/
+build/
+
+# ── Tool caches ────────────────────────────────────────────
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ── Model weights (large binaries - download separately) ───
+# See models/README.md for sources. Files here exceed GitHub's
+# 100 MB limit (model.bin is ~2.9 GB).
+models/*
+!models/README.md
+
+# ── Generated audio output ─────────────────────────────────
+# Test/CLI input fixtures are kept; synthesized output is not.
+*.wav
+!sample_input.wav
+!telugu_input.wav
+
+# ── Logs ───────────────────────────────────────────────────
+*.log
+
+# ── IDE / OS ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

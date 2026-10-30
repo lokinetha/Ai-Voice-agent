@@ -1,0 +1,3 @@
+"""
+Voice CLI package init.
+"""
