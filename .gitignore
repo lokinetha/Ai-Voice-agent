@@ -31,8 +31,8 @@ models/*
 # ── Generated audio output ─────────────────────────────────
 # Test/CLI input fixtures are kept; synthesized output is not.
 *.wav
-!sample_input.wav
-!telugu_input.wav
+sample_input.wav
+telugu_input.wav
 
 # ── Logs ───────────────────────────────────────────────────
 *.log
